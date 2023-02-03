@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hard</title>
+  </head>
+
+  <body>
+    <div
+      id="div1"
+      class="click"
+      style="width: 200px; height: 200px; background-color: red"
+    ></div>
+    <div
+      id="div2"
+      class="click"
+      style="width: 200px; height: 200px; background-color: red"
+    ></div>
+    <div
+      id="div3"
+      class="click"
+      style="width: 200px; height: 200px; background-color: red"
+    ></div>
+    <div
+      id="div4"
+      class="click"
+      style="width: 200px; height: 200px; background-color: red"
+    ></div>
+  </body>
+
+  <script>
+    div = document.querySelectorAll("div").forEach((div) => {
+      div.addEventListener("click", (e) => {
+        const id = e.target.getAttribute("id");
+        div.style.backgroundColor = color;
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      color = "red";
+      if (event.key === "a") {
+        color = "blue";
+      } else if (event.key === "s") {
+        color = "black";
+      } else if (event.key === "d") {
+        color = "yellow";
+      } else if (event.key === "f") {
+        color = "pink";
+      }
+    });
+  </script>
+</html>
